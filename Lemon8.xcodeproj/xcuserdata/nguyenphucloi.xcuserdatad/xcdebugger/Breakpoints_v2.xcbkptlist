@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0313A441-2907-4C83-8238-0378C97FD0A4"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38467F9F-877E-4061-AAEA-44307B012A3B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../Library/Developer/Xcode/DerivedData/Lemon8-ddkdyqxodouqxoagcwgtmrrofbhw/SourcePackages/checkouts/firebase-ios-sdk/FirebaseAuth/Sources/Auth/FIRAuth.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1672"
+            endingLineNumber = "1672"
+            landmarkName = "FIRAuth"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8151AFA1-C80E-46DA-8BA4-4DF8000D4256"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lemon8/Manager/Manager_Authentication.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "fetchUser()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8151AFA1-C80E-46DA-8BA4-4DF8000D4256 - d9976748b7af8c54"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lemon8.UserConfigurationManager.fetchUser() -&gt; ()"
+                  moduleName = "Lemon8"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenphucloi/Desktop/Code/IOS/Lemon8/Lemon8/Manager/Manager_Authentication.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "952">
+               </Location>
+               <Location
+                  uuid = "8151AFA1-C80E-46DA-8BA4-4DF8000D4256 - 11083dd7d99011bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Lemon8.UserConfigurationManager.fetchUser() -&gt; ()"
+                  moduleName = "Lemon8"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenphucloi/Desktop/Code/IOS/Lemon8/Lemon8/Manager/Manager_Authentication.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "8151AFA1-C80E-46DA-8BA4-4DF8000D4256 - d9976748b7af8c54"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lemon8.UserConfigurationManager.fetchUser() -&gt; ()"
+                  moduleName = "Lemon8"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenphucloi/Desktop/Code/IOS/Lemon8/Lemon8/Manager/Manager_Authentication.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "928">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

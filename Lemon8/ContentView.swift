@@ -8,17 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var currentTab: Tab = .addNewPost
+    
+    init() {
+        UITabBar.appearance().isHidden = true 
+    }
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            VStack(spacing: 0.0) {
+                TabView(selection: $currentTab) {
+                    NewfeedsView()
+                        .tag(Tab.home)
+                    
+                    SearchView()
+                        .tag(Tab.search)
+                    
+                    AddNewPostView()
+                        .tag(Tab.addNewPost)
+                    
+                    NotificationsView()
+                        .tag(Tab.notifications)
+                    
+                    MyProfileView()
+                        .tag(Tab.profile)
+                }
+                TabBarModifier(currentTab: $currentTab)
+            }
+            .ignoresSafeArea(.keyboard)
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(UserConfigurationManager())
+    
 }
