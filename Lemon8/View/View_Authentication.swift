@@ -125,7 +125,7 @@ struct AuthenticationView: View {
                 }, label: {
                     HStack(alignment: .center) {
                         Text(self.isSignUp ? "Already have an account?" : "New here")
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.white)
                         Text(self.isSignUp ? "Login" : "Create an account")
                     }
                     .padding()
@@ -144,7 +144,7 @@ struct AuthenticationView: View {
 //                    generator.selectionChanged()
 //                    self.authenticate()
 //                })
-                GradientButton(title: isSignUp ? "Get Started" : "Let's go bitch", action: {
+                GradientButton(title: isSignUp ? "Get Started" : "Let's go", action: {
                     generator.selectionChanged()
                     self.authenticate()
                 }, bgColor: Color("tertiaryBackground"), agColor: [Color.red, Color.blue])
@@ -175,7 +175,7 @@ struct AuthenticationView: View {
                   dismissButton: .cancel())
         }
         .fullScreenCover(isPresented: $shouldNavigateToProfileView) {
-            MyProfileView()
+            ContentView()
         }
         
     }

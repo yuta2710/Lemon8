@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension Encodable {
     func toDictionary() -> [String: Any] {
@@ -50,5 +51,34 @@ extension Date {
             return "\(minutes) minutes ago"
         }
         return "just now ago"
+    }
+}
+
+extension TimeInterval {
+    func convertToDateFormatForUIDisplay() -> String {
+        return Date(timeIntervalSince1970: self)
+            .formatted(
+                date: .abbreviated,
+                time: .shortened)
+    }
+}
+
+extension UIImage {
+    func aspectFittedToHeight(_ newHeight: CGFloat) -> UIImage {
+        let scaleCal = newHeight / self.size.height
+        let newWidth = self.size.width * scaleCal
+        let newSize = CGSize(width: newWidth, height: newHeight)
+        let renderer = UIGraphicsImageRenderer(size: newSize)
+        
+        return renderer.image { _ in
+            self.draw(in: CGRect(origin: .zero, size: newSize))
+        }
+    }
+    
+    func compressImage(image: UIImage) -> UIImage {
+        var resizedImage = image.aspectFittedToHeight(200)
+        resizedImage.jpegData(compressionQuality: 0.2)
+        
+        return resizedImage
     }
 }

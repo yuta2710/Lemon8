@@ -9,10 +9,8 @@ import SwiftUI
 import PhotosUI
 
 struct AddNewPostView: View {
-    @State private var images: [UIImage] = []
-    @State private var photosPickerItem: [PhotosPickerItem] = []
-    @State private var isOpenSheet: Bool = false
-    
+    @StateObject private var postVM: PostViewViewModel = PostViewViewModel()
+    @State private var isBackToNewfeeds: Bool = false
     
     var body: some View {
         NavigationView {
@@ -48,17 +46,18 @@ struct AddNewPostView: View {
                 VStack {
                     ScrollView(.horizontal) {
                         HStack (spacing: 20) {
-                            ForEach(0..<images.count, id: \.self) { i in
-                                Image(uiImage: images[i])
+                            ForEach(0..<postVM.images.count, id: \.self) { i in
+                                Image(uiImage: postVM.images[i])
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 120, height: 120)
                                     .cornerRadius(5.0)
                             }
                             PhotosPicker(
-                                selection: $photosPickerItem,
+                                selection: $postVM.photosPickerItem,
+                                
                                 maxSelectionCount: 5,
-                                selectionBehavior: .ordered) {
+                                selectionBehavior: .ordered, matching: .images) {
                                     Image(systemName: "plus.circle")
                                         .resizable()
                                         .frame(width: 120, height: 120)
@@ -102,28 +101,26 @@ struct AddNewPostView: View {
                     }
                     GradientButton(
                         title: "Post",
-                        action: {},
+                        action: {
+                            postVM.uploadNewPost(heading: "Làm đẹp cực nứng", content: "In simple words, ‘Beauty’ is what gladdens the heart. Neither a symmetrical face nor a shapely body—If the sight of you generates happiness, you’re beautiful. —Adeel Ahmed Khan", hashtags: ["nungggggg", "lozzzzzzz"])
+                            self.isBackToNewfeeds.toggle()
+                            
+                        },
                         bgColor: Color("secondaryBackground"),
                         agColor: [Color.red, Color.blue])
                     
                 }
-                .onChange(of: photosPickerItem) { _, _ in
+                .onChange(of: postVM.photosPickerItem) { _, _ in
                     Task {
-                        for item in photosPickerItem {
-                            if let data = try? await item.loadTransferable(type: Data.self) {
-                                if let image = UIImage(data: data) {
-                                    images.append(image)
-                                }
-                            }
-                        }
-                        
-                        photosPickerItem.removeAll()
+                        postVM.photosPickerItem.removeAll() // Remove all selection after turn off photo sheet
                     }
                 }
                 
             }
         }
-        
+        .fullScreenCover(isPresented: $isBackToNewfeeds){
+            ContentView()
+        }
         
     }
 }

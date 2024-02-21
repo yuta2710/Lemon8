@@ -70,7 +70,11 @@ class UserConfigurationManager: ObservableObject {
                     youtube: data["youtube"] as? String ?? "",
                     yourWebsite: data["yourWebsite"] as? String ?? "",
                     followers: data["followers"] as? [UserEntity] ?? [],
-                    followings: data["followings"] as? [UserEntity] ?? [])
+                    followings: data["followings"] as? [UserEntity] ?? [],
+                    posts: data["posts"] as? [PostEntity] ?? [],
+                    avatar: data["avatar"] as? String ?? ""
+                )
+            
             }
         }
              
@@ -107,7 +111,7 @@ class UserConfigurationManager: ObservableObject {
                 return
             }
             
-            let userData = UserEntity(id: userId, name: "", username: "", email: email, biography: "", gender: nil, age: 18, area: "", tiktok: "", instagram: "", twitter: "", youtube: "", yourWebsite: "", followers: [], followings: [])
+            let userData = UserEntity(id: userId, name: "", username: "", email: email, biography: "", gender: nil, age: 18, area: "", tiktok: "", instagram: "", twitter: "", youtube: "", yourWebsite: "", followers: [], followings: [], posts: [], avatar: nil)
             
             self.createUser(userInputData: userData.toDictionary(), callback: callback)
             
