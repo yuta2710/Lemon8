@@ -15,7 +15,8 @@ struct NewfeedsView: View {
     
     var body: some View {
         List {
-            ForEach (newfeedsVM.posts.sorted(by: {$0.createdAt < $1.createdAt}), id: \.id) { post in
+            ForEach (newfeedsVM.posts.sorted(by: {$0.createdAt < $1.createdAt}), 
+                     id: \.id) { post in
                 PostDetailsPreviewer(post: post)
             }
         }

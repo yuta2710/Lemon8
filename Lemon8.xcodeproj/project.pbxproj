@@ -85,6 +85,8 @@
 		CF6B3A9A2B839144002CA423 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CF6B3A992B839144002CA423 /* FirebaseStorage */; };
 		CF6B3A9C2B860D7B002CA423 /* Util_VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B3A9B2B860D7B002CA423 /* Util_VisualEffectBlur.swift */; };
 		CF6B3A9E2B8653E4002CA423 /* Manager_Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B3A9D2B8653E4002CA423 /* Manager_Users.swift */; };
+		CF6B3AA02B870F56002CA423 /* View_EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B3A9F2B870F56002CA423 /* View_EditProfile.swift */; };
+		CF6B3AA22B871099002CA423 /* UI_GradientTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B3AA12B871099002CA423 /* UI_GradientTextFieldWithIcon.swift */; };
 		CFAF9A3B2B81BC450009FEEB /* View_PostDetailPreviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF9A3A2B81BC450009FEEB /* View_PostDetailPreviewer.swift */; };
 		CFAF9A3D2B81FEF60009FEEB /* UI_PostCardTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF9A3C2B81FEF60009FEEB /* UI_PostCardTemplate.swift */; };
 		CFAF9A3F2B82454A0009FEEB /* UI_CircleWithGradientIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF9A3E2B82454A0009FEEB /* UI_CircleWithGradientIconButton.swift */; };
@@ -132,6 +134,8 @@
 		CF6B3A962B838FAF002CA423 /* ViewModel_Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel_Post.swift; sourceTree = "<group>"; };
 		CF6B3A9B2B860D7B002CA423 /* Util_VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util_VisualEffectBlur.swift; sourceTree = "<group>"; };
 		CF6B3A9D2B8653E4002CA423 /* Manager_Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager_Users.swift; sourceTree = "<group>"; };
+		CF6B3A9F2B870F56002CA423 /* View_EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_EditProfile.swift; sourceTree = "<group>"; };
+		CF6B3AA12B871099002CA423 /* UI_GradientTextFieldWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI_GradientTextFieldWithIcon.swift; sourceTree = "<group>"; };
 		CFAF9A3A2B81BC450009FEEB /* View_PostDetailPreviewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_PostDetailPreviewer.swift; sourceTree = "<group>"; };
 		CFAF9A3C2B81FEF60009FEEB /* UI_PostCardTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI_PostCardTemplate.swift; sourceTree = "<group>"; };
 		CFAF9A3E2B82454A0009FEEB /* UI_CircleWithGradientIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI_CircleWithGradientIconButton.swift; sourceTree = "<group>"; };
@@ -283,6 +287,7 @@
 				CF62D37A2B7901C0006C9F09 /* View_ChatScreen.swift */,
 				CF62D37C2B7901DB006C9F09 /* View_ListOfChat.swift */,
 				CF62D37E2B790212006C9F09 /* View_Search.swift */,
+				CF6B3A9F2B870F56002CA423 /* View_EditProfile.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				CF62D4062B7B421A006C9F09 /* UI_CustomTextFieldStyle.swift */,
 				CF62D4082B7B4AF2006C9F09 /* UI_CustomSecureField.swift */,
 				CFAF9A3C2B81FEF60009FEEB /* UI_PostCardTemplate.swift */,
+				CF6B3AA12B871099002CA423 /* UI_GradientTextFieldWithIcon.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -492,10 +498,12 @@
 				CF62D4142B7E4217006C9F09 /* ViewModel_NavigationManagement.swift in Sources */,
 				CF62D39F2B790E8F006C9F09 /* UI_SearchBarModifier.swift in Sources */,
 				CFAF9A412B8326620009FEEB /* Optional_Colors.swift in Sources */,
+				CF6B3AA02B870F56002CA423 /* View_EditProfile.swift in Sources */,
 				CF62D3942B790D35006C9F09 /* Model_Post.swift in Sources */,
 				CF6B3A952B833FA2002CA423 /* Constant_Tab.swift in Sources */,
 				CF62D4092B7B4AF2006C9F09 /* UI_CustomSecureField.swift in Sources */,
 				CF62D4102B7E09F9006C9F09 /* ViewModel_MyProfile.swift in Sources */,
+				CF6B3AA22B871099002CA423 /* UI_GradientTextFieldWithIcon.swift in Sources */,
 				CF62D3A52B7999AE006C9F09 /* UI_GradientText.swift in Sources */,
 				CF62D37F2B790212006C9F09 /* View_Search.swift in Sources */,
 				CF62D4182B7F1C1D006C9F09 /* Manager_Image.swift in Sources */,

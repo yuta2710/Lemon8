@@ -16,7 +16,7 @@ struct SolidButton: View {
         Button(action: buttonAction, label: {
             Text(buttonTitle)
                 .bold()
-                .padding(EdgeInsets(top: 12, leading: 2, bottom: 12, trailing: 2))
+                .padding(EdgeInsets(top: 12, leading: 0, bottom: 12, trailing: 0))
                 .foregroundColor(Color.white)
             
         })

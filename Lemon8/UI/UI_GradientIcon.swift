@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TextFieldIcon: View {
+struct GradientIcon: View {
     // rootBackgroundOfIcon, colorOfIcon, sizeOfIcon, weightOfIcon: Font.Weight
     @State private var rootBackgroundOfIcon: Color = Color("tertiaryBackground")
     @State private var gradientColorOfIcon: [Color] = [
@@ -19,6 +19,7 @@ struct TextFieldIcon: View {
     @State private var widthOfIconObject: CGFloat = 36
     @State private var heightOfIconObject: CGFloat = 36
     var gradientColorOfActiveState: [Color]? = Color.mockGradient1
+    var nameOfIcon: String = "key"
     
     @Binding var onActive: Bool
     
@@ -54,7 +55,7 @@ struct TextFieldIcon: View {
                         .stroke(Color.white, lineWidth: 1.0)
                         .blendMode(.overlay)
                     
-                    Image(systemName: "key")
+                    Image(systemName: nameOfIcon)
                         .gradientForeground(colors: gradientColorOfIcon)
                         .font(.system(size: sizeOfIcon, weight: weightOfIcon))
                         
@@ -69,5 +70,5 @@ struct TextFieldIcon: View {
 }
 
 #Preview {
-    TextFieldIcon(onActive: .constant(true))
+    GradientIcon(onActive: .constant(true))
 }

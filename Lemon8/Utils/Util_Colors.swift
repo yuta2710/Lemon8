@@ -23,4 +23,6 @@ extension Color {
         Color.init(red: 109/255, green: 1, blue: 185),
         Color.init(red: 39/255, green: 232/255, blue: 1),
     ]
+    
+    static let mockSolid1: Color = Color.init(red: 26/255, green: 20/255, blue: 51/255)
 }
